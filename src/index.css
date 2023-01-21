@@ -4,13 +4,21 @@
     padding: 0;
 }
 
+:root {
+    --dark-cyan: #032830;
+    --light-cyan: #e6f5f9;
+    --light-purple: #6f42c1;
+}
+
 body {
     background-color: var(--bs-gray-900);
+    color: var(--dark-cyan);
+    font-family: 'Roboto', sans-serif;
 }
 
 .banner__title {
     color: var(--bs-cyan);
-    margin: 0;
+    text-shadow: 0 0 2px white;
 }
 
 .searchForm {
@@ -22,69 +30,73 @@ body {
 }
 
 .error {
-    width: max-content;
-    margin: 0 auto;
+    max-width: max-content;
     padding: .5rem 2rem;
+    text-align: justify;
 }
 
 .books {
-    padding-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     gap: 2rem;
+    justify-content: space-evenly;
+    padding-top: 1rem;
 }
 
 .card {
+    background-color: var(--light-cyan);
     width: 270px;
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
+    font-family: 'Alegreya', serif;
 }
 
 .card-img-top, .card__no-img {
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+    height: 170px;
+    margin: 0 auto;
+    width: auto;
 }
 
 .card__no-img{
-    width: 250px;
-    height: 380px;
+    align-items: center;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    width: 112px;
+}
+
+.card-title {
+    color: var(--light-purple);
+    font-size: 1.4rem;
+}
+
+.card-text-not-available {
+    flex-grow: 2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-title {
-    text-decoration: underline;
-    font-size: 1.7rem;
-}
-
-.card-auth {
-    color: var(--bs-indigo);
-    border-radius: 10px;
-}
-
 .btn {
-    font-weight: 600;
-}
-
-.btn-success {
-    margin-top: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .card-text {
-    font-style: italic;
-    text-align: justify;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box; 
-    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    display: -webkit-box; 
+    font-style: italic;
+    overflow: hidden;
+    text-align: justify;
+    text-overflow: ellipsis;
 }
 
-
+.spinner {
+    height: 5rem;
+    width: 5rem;
+}
