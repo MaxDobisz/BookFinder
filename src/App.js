@@ -17,16 +17,16 @@ export const App = () => {
             setSpinner(true);
 
             try {
-                const { data: { items } } = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${query}`);
+                const { data } = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${query}`);
 
-                if (!items) {
-                    setError(`Sorry, we couldn't find any books matching your search criteria. Please try again with different keywords.`);
-                } else {
-                    setBooks(items);
+                if (data.items && data.items.length > 0) {
+                    setBooks(data.items);
                 }
 
+                setError(`Sorry, we couldn't find any books matching your search criteria. Please try again with different keywords.`);
+
             } catch (error) {
-                setError('An error has occurred. Please try again.');
+                setError(`An error has occurred: ${error.message}`);
             }
 
             setSpinner(false);
