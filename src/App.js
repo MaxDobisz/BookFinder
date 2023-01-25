@@ -21,9 +21,9 @@ export const App = () => {
 
                 if (data.items && data.items.length > 0) {
                     setBooks(data.items);
+                } else {
+                    setError(`Sorry, we couldn't find any books matching your search criteria. Please try again with different keywords.`);
                 }
-
-                setError(`Sorry, we couldn't find any books matching your search criteria. Please try again with different keywords.`);
 
             } catch (error) {
                 setError(`An error has occurred: ${error.message}`);

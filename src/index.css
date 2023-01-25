@@ -101,7 +101,17 @@ body {
     width: 5rem;
 }
 
+@media(max-width: 770px) {
+    .card {
+        width: 70%;
+    }
+}
+
 @media(max-width: 450px) {
+    .card {
+        width: 90%;
+    }
+
     .searchForm {
         align-items: center;    
         flex-direction: column;
