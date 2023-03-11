@@ -1,6 +1,6 @@
 # BookFinder
 
-A book search app that allows users to search for books by providing a text query. The app searches for books whose titles include the provided text and displays the results to the user.
+Book Finder is an app that lets users search for books by entering a text query. The app displays search results for books with titles that include the entered text.
 
 [Live](https://book-search-nnhglum07-maxdobisz.vercel.app/)
 
